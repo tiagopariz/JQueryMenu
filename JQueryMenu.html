@@ -32,7 +32,7 @@
 		//	alert("Olá mundo!");
 		//});
 		
-		$(function () {
+		/* $(function () {
 			$('nav li').hover(
 				function () {
 					console.log("entrou");
@@ -40,7 +40,18 @@
 				function () {
 					console.log("saiu");
 				});
+		}); */
+		
+		$(function () {
+			$('nav li').hover(
+				function () {
+					$(this).css({"background-color" : "#0AC"});
+				},
+				function () {
+					$(this).css({"background-color" : "#0BD"});
+			});
 		});
+		
 	</script>
 	
 	<body>
