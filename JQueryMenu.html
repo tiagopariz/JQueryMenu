@@ -16,6 +16,7 @@
 			background-color: #0BD;
 		}
 		nav ul li ul {
+			display: none;
 			position: absolute;
 			width: 170px;
 		}
@@ -42,13 +43,25 @@
 				});
 		}); */
 		
-		$(function () {
+		/* $(function () {
 			$('nav li').hover(
 				function () {
 					$(this).css({"background-color" : "#0AC"});
 				},
 				function () {
 					$(this).css({"background-color" : "#0BD"});
+			});
+		}); */
+		
+		$(function () {
+			$('nav li').hover(
+				function () {
+					$(this).css({"background-color" : "#0AC"});
+					$('ul', this).stop().slideDown(200);
+				},
+				function () {
+					$(this).css({"background-color" : "#0BD"});
+					$('ul', this).stop().slideUp(200);
 			});
 		});
 		
