@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Menu com JQuery</title>
+	</head>
+	
+	<style>
+		nav a {
+			text-decoration: none;
+			display: block;
+			padding: 10px 10px;
+		}
+		nav ul li {
+			float: left;
+			display: inline;
+			background-color: #0BD;
+		}
+		nav ul li ul {
+			position: absolute;
+			width: 170px;
+		}
+		nav ul li ul li {
+			width: 170px;
+			background-color: #0BD
+		}
+	</style>
+	
+	<script src="js/jquery-3.2.1.js"></script>
+	
+	<script>   
+		
+		$(function () {
+		
+			$('nav ul li ul').css({"display" : "none"});
+			
+			$('nav li').hover(
+				function () {
+					$(this).css({"background-color" : "#0AC"});
+					$('ul', this).stop().slideDown(200);
+				},
+				function () {
+					$(this).css({"background-color" : "#0BD"});
+					$('ul', this).stop().slideUp(200);
+			});
+		});
+		
+	</script>
+	
+	<body>
+		<nav>
+			<ul>
+				<li>
+					<a href="#">Nossos produtos</a>
+					<ul>
+						<li><a href="#">Produto A</a></li>
+						<li><a href="#">Produto B</a></li>
+						<li><a href="#">Produto C</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="#">Nossos serviços</a>
+					<ul>
+						<li><a href="#">Serviço A</a></li>
+						<li><a href="#">Serviço B</a></li>
+						<li><a href="#">Serviço C</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="#">Nossos clientes</a>
+					<ul>
+						<li><a href="#">Cliente A</a></li>
+						<li><a href="#">Cliente B</a></li>
+						<li><a href="#">Cliente C</a></li>
+						<li><a href="#">Cliente D</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="#">Sobre nós</a>
+					<ul>
+						<li><a href="#">Quem somos</a></li>
+						<li><a href="#">O que fazemos</a></li>
+						<li><a href="#">O que pensamos</a></li>
+					</ul>
+				</li>
+			</ul>
+		</nav>
+	</body>
+	
+</html>
