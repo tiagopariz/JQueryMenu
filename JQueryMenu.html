@@ -28,11 +28,19 @@
 	<script src="js/jquery-3.2.1.js"></script>
 	
 	<script>
-		<!-- $(function () { -->
-			<!-- alert("Olá mundo!"); -->
-		<!-- }); -->
+	    //$(function () {
+		//	alert("Olá mundo!");
+		//});
 		
-		
+		$(function () {
+			$('nav li').hover(
+				function () {
+					console.log("entrou");
+				},
+				function () {
+					console.log("saiu");
+				});
+		});
 	</script>
 	
 	<body>
